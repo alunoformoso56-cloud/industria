@@ -1,0 +1,16 @@
+@extends('layouts.app')
+@section('title','Lista de setores')
+@section('content')
+<h1>Cadastrar setor</h1>
+<form action="{{ route('setores.store') }}" method="post" class="container mt-4">
+    @csrf
+    <div class="mb3">
+        <label for="" class="form-label">Nome</label>
+        <input type="text" name="nome" id="nome" class="form-control">
+    </div>
+    <br>
+    <button type="submit"  class="btn btn-success">Salvar</button>
+</form>
+ 
+ 
+@endsection
