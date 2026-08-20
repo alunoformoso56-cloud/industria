@@ -3,14 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Equipamento;
-
-
 
 class Equipamento extends Model
 {
     protected $table = 'equipamentos';
-    protected $fillable = ['nome', 'patrimonio', 'setor_id', 'status'];
+
+    public $timestamps = false;  
+
+    protected $fillable = [
+        'nome',
+        'patrimonio',
+        'status',
+        'setor_id',
+    ];
 
     public function setor()
     {

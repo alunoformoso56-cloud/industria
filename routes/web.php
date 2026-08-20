@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SetorController;
 use App\Http\Controllers\FuncionarioController;
+use App\Http\Controllers\EquipamentoController;
 
 
 Route::get('/', function () {
@@ -21,3 +22,5 @@ Route::resource('funcionarios', FuncionarioController::class);
 
 Route::patch('/setores/{id}/status',[SetorController::class,
  'ativarDesativar'])->name('setores.ativar-desativar');
+
+ Route::resource('equipamentos', EquipamentoController::class);
